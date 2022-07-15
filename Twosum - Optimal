@@ -1,0 +1,16 @@
+# Optimal Solution
+
+def two(num,target):
+    sum = []
+    hashtable = {}
+    
+    for i in range(len(num)):
+        complement = target - num[i]
+        if complement in hashtable:
+            print(f"The pairs of {target} are: ({num[i]}, {complement})")
+        hashtable[num[i]] = num[i]
+
+num = [4,5,1,8]
+target = 9
+
+two(num,target)
